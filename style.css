@@ -1,4 +1,4 @@
-/* Default styles for large screens and desktops */
+/* General styles for large screens and desktops */
 * {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -89,14 +89,19 @@
     margin-bottom: 1rem;
 }
 
-/* Responsive design starts here */
+/* Responsive design using media queries */
 
-/* Tablets (max-width: 768px) */
+/* For tablets (max-width: 768px) */
 @media (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 10px;
+    }
+
+    .nav-logo {
+        height: 40px;
+        width: 80px;
     }
 
     .nav_search {
@@ -118,9 +123,27 @@
     .box-image {
         height: 200px;
     }
+
+    .hero-section {
+        height: 250px;
+    }
+
+    .HERO-MESSAGE {
+        font-size: 12px;
+        width: 100%;
+    }
+    
+    footer, .footer-panel2 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .panel_option {
+        width: 100%;
+    }
 }
 
-/* Mobile phones (max-width: 480px) */
+/* For mobile phones (max-width: 480px) */
 @media (max-width: 480px) {
     .navbar {
         flex-wrap: wrap;
@@ -149,9 +172,25 @@
         font-size: 12px;
         width: 100%;
     }
+
+    .nav-cart i {
+        font-size: 30px;
+    }
+
+    .panel {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+
+    ul a {
+        font-size: 12px;
+    }
 }
 
-/* Larger screens (min-width: 1200px) */
+/* For large screens (min-width: 1200px) */
 @media (min-width: 1200px) {
     .navbar {
         height: 70px;
@@ -164,4 +203,32 @@
     .box {
         width: 22%;
     }
+}
+
+/* Specific adjustments for different footer sections */
+
+.footer-panel1, .footer-panel2 {
+    background-color: #222f3d;
+    color: white;
+    text-align: center;
+}
+
+.copyrights {
+    padding-top: 5px;
+    background-color: #131A22;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.copyrights a {
+    justify-content: space-evenly;
+    padding: 0px 7.5px;
+    color: white;
+    text-decoration: none;
+}
+
+.copyrights a:hover {
+    text-decoration: underline;
 }
